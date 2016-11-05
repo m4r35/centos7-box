@@ -26,7 +26,7 @@ Vagrant.configure("2") do |config|
 
   # Create a private network, which allows host-only access to the machine
   # using a specific IP.
-  config.vm.hostname = "cdn.tools"
+  #config.vm.hostname = "cdn.tools"
   config.vm.network "private_network", ip: "150.10.10.10"
 
   # Create a public network, which generally matched to bridged network.
@@ -38,6 +38,7 @@ Vagrant.configure("2") do |config|
   # the path on the host to the actual folder. The second argument is
   # the path on the guest to mount the folder. And the optional third
   # argument is a set of non-required options.
+  config.vm.synced_folder ".", "/vagrant", :mount_options => ["dmode=777", "fmode=666"], type: "virtualbox"
   config.vm.synced_folder "../../../code", "/opt/code"
 
   # Provider-specific configuration so you can fine-tune various
@@ -54,7 +55,7 @@ Vagrant.configure("2") do |config|
   #
   # View the documentation for the provider you are using for more
   # information on available options.
-  
+
   # Define a Vagrant Push strategy for pushing to Atlas. Other push strategies
   # such as FTP and Heroku are also available. See the documentation at
   # https://docs.vagrantup.com/v2/push/atlas.html for more information.
@@ -71,4 +72,7 @@ Vagrant.configure("2") do |config|
   # SHELL
   config.vm.provision :shell, path: "provisioners/common.sh"
   config.vm.provision :shell, path: "provisioners/bootstrap.sh"
+
+
+  config.vm.provision :shell, inline: "sudo systemctl start php-fpm.service && sudo systemctl start nginx.service", run: "always"
 end

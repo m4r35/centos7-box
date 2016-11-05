@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
-
 yum -y install http://rpms.remirepo.net/enterprise/remi-release-7.rpm
 yum -y install https://dev.mysql.com/get/mysql57-community-release-el7-8.noarch.rpm
 yum-config-manager --enable remi-php56
@@ -10,6 +9,11 @@ if ! [ -L /var/www ]; then
   rm -rf /var/www
   ln -fs /vagrant /var/www
 fi
+
+mkdir -p /opt/code/logs
+
+touch /opt/code/logs/cdn.tools.access.log
+touch /opt/code/logs/cdn.tools.error.log
 
 # Configure MySQL
 cp /etc/my.cnf /etc/my.cnf.rpmnew
@@ -24,17 +28,17 @@ semanage permissive -a httpd_t
 
 # Enable and start services
 systemctl daemon-reload
-systemctl enable httpd
+systemctl enable httpd.service
 #systemctl enable memcached.service
 systemctl enable mysqld.service
 systemctl enable php-fpm.service
-systemctl enable nginx
+systemctl enable nginx.service
 
-systemctl start httpd
+systemctl start httpd.service
 #systemctl start memcached.service
 systemctl start mysqld.service
 systemctl start php-fpm.service
-systemctl start nginx
+systemctl start nginx.service
 
 # Create the remote MySQL user
 # mysql -e "create user 'root'@'10.%'"
