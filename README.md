@@ -54,10 +54,11 @@ puphpet/centos65-x64 (virtualbox, 20151130)
 
 For additional info check [official Centos documentation](https://seven.centos.org/2016/10/updated-centos-vagrant-images-available-v1609-01/).
 
-After adding Centos iso to Vagrant we can initialize configuration by specifying desired box name:
+After adding Centos iso to Vagrant we can bootstrap our new box:
 
 ```
 #!bash
 
-vagrant init centos/7
+vagrant up
 ```
+Configuration shouldn't take longer than 10 minutes :)
