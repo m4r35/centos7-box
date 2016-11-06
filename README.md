@@ -79,4 +79,8 @@ By default, nginx is configured to listen on port 80 while apache is listening o
       my.cnf
 
 - provisioners
+  bootstrap.sh
+  common.sh
+
+Vagranfile
 ```
