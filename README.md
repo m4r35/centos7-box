@@ -72,11 +72,12 @@ By default, nginx is configured to listen on port 80 while apache is listening o
 
 - files
     - m4r35-fra
-      - httpd
-      - nginx
-      - php-fpm.d
-      - php.d
-      my.cnf
+      - etc
+        - httpd
+        - nginx
+        - php-fpm.d
+        - php.d
+        my.cnf
 
 - provisioners
   bootstrap.sh
