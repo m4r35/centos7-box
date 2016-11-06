@@ -3,14 +3,14 @@ yum -y install http://rpms.remirepo.net/enterprise/remi-release-7.rpm
 yum -y install https://dev.mysql.com/get/mysql57-community-release-el7-8.noarch.rpm
 yum-config-manager --enable remi-php56
 yum -y update
-yum install -y memcached mysql-community-server httpd php php-fpm php-mysql php-gd nginx
-
+yum install -y memcached mysql-community-server httpd php php-fpm php-mysql php-gd php-intl php-mbstring php-xmlrpc php-pecl-apcu php-pecl-memcached php-pecl-xdebug php-soap php-bcmath nginx rubygems ruby-devel rubygem-json_pure nodejs npm
+npm install gulp -g
 #if ! [ -L /var/www ]; then
 #  rm -rf /var/www
 #  ln -fs /vagrant /var/www
 #fi
 
-# Configure log files
+# Create log files
 mkdir -p /opt/code/logs
 
 touch /opt/code/logs/cdn.tools.access.log
@@ -18,7 +18,7 @@ touch /opt/code/logs/cdn.tools.error.log
 touch /opt/code/logs/apartmanimandic.access.log
 touch /opt/code/logs/apartmanimandic.error.log
 
-# Configure hosts file
+# Update hosts file
 echo "127.0.0.1 cdn.tools.test" >> /etc/hosts
 echo "127.0.0.1 apartmanimandic.test" >> /etc/hosts
 
@@ -41,7 +41,7 @@ mv /etc/php-fpm.d/www.conf /etc/php-fpm.d/www.conf.orig
 semanage permissive -a httpd_t
 
 # Install composer
-#curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
+curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 
 # Enable and start services
 systemctl daemon-reload
