@@ -2,12 +2,12 @@
 
 ## This build is aimed for development primarily.
 
-### Software prerequisites
+### Software Prerequisites
 
 * Vagrant 1.8.4
 * VirtualBox 5.0.26
 
-### Packages included ###
+### Packages Included ###
 
 * vim
 * tmux
@@ -30,7 +30,7 @@
 * gulp
 * composer
 
-### How do I get set up? ###
+### Quick Start ###
 
 * Summary of set up
 * Configuration
@@ -38,14 +38,3 @@
 * Database configuration
 * How to run tests
 * Deployment instructions
-
-### Contribution guidelines ###
-
-* Writing tests
-* Code review
-* Other guidelines
-
-### Who do I talk to? ###
-
-* Repo owner or admin
-* Other community or team contact
