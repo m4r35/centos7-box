@@ -74,6 +74,5 @@ Vagrant.configure("2") do |config|
   config.vm.provision :shell, path: "provisioners/common.sh"
   config.vm.provision :shell, path: "provisioners/bootstrap.sh"
 
-
   #config.vm.provision :shell, inline: "sudo systemctl start php-fpm.service && sudo systemctl start nginx.service", run: "always"
 end

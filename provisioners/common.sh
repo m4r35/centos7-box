@@ -11,9 +11,6 @@ yum -y install rsync vim-enhanced policycoreutils-python
 timedatectl set-timezone UTC
 ntpdate pool.ntp.org
 
-# Add common hosts entries.
-#echo "172.17.8.10 portal.stackpath.local" >> /etc/hosts
-
 # Copy machine-specific files into place.
 if [ -d "/vagrant/files/$HOSTNAME" ]; then
   rsync --recursive --verbose --backup /vagrant/files/$HOSTNAME/ /

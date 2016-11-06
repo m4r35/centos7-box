@@ -67,4 +67,14 @@ mysql -e "grant all privileges on *.* to 'root'@'10.%'"
 mysql -e "grant all privileges on *.* to 'root'@'150.10.10.%'"
 
 # Configure databases
-mysql -u root wordpress < /vagrant/files/m4r35-fra/db/apartmanimandic.sql
+mysql -u root wordpress < /vagrant/files/$HOSTNAME/db/apartmanimandic.sql
+
+# Make helper script
+mkdir -p /scripts
+touch /scripts/services.sh
+echo "#!/usr/bin/env sh" >> /scripts/services.sh
+echo "systemctl status httpd.service" >> /scripts/services.sh
+echo "systemctl status memcached.service" >> /scripts/services.sh
+echo "systemctl status mysqld.service" >> /scripts/services.sh
+echo "systemctl status php-fpm.service" >> /scripts/services.sh
+echo "systemctl status nginx.service" >> /scripts/services.sh
