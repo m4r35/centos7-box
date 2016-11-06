@@ -32,7 +32,7 @@
 
 ### Quick Start ###
 
-First we need to add Centos/7 iso to vagrant
+First we need to add Centos/7 iso to Vagrant
 
 ```
 #!sh
@@ -40,7 +40,7 @@ First we need to add Centos/7 iso to vagrant
 vagrant box add centos/7
 ```
 
-We can see the list of existing vagrant boxes by typing:
+We can see the list of existing Vagrant boxes by typing:
 
 
 ```
