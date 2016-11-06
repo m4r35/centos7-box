@@ -52,7 +52,7 @@ centos/7             (virtualbox, 1609.01)
 puphpet/centos65-x64 (virtualbox, 20151130)
 ```
 
-For additional info check [official Centos documentation](https://seven.centos.org/2016/10/updated-centos-vagrant-images-available-v1609-01/).
+>For additional info check [official Centos documentation](https://seven.centos.org/2016/10/updated-centos-vagrant-images-available-v1609-01/).
 
 After adding Centos iso to Vagrant we can bootstrap our new box:
 
