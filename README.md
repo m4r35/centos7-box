@@ -1,12 +1,30 @@
-# README #
+# My Centos7 Vagrant Box #
 
-This README would normally document whatever steps are necessary to get your application up and running.
+>*This build is aimed for development primarily.*
 
-### What is this repository for? ###
 
-* Quick summary
-* Version
-* [Learn Markdown](https://bitbucket.org/tutorials/markdowndemo)
+### Packages included ###
+
+* vim
+* tmux
+* policycoreutils-python
+* git
+* ntp
+* wget
+* make
+* memcached
+* mysql-community-server
+* httpd
+* php (php-mysql, php-gd, php-intl php-mbstring, php-xmlrpc, php-pecl-apcu, php-pecl-memcached, php-pecl-xdebug php-soap php-bcmath)
+* php-fpm
+* nginx 
+* rubygems 
+* ruby-devel 
+* rubygem-json_pure 
+* nodejs 
+* npm
+* gulp
+* composer
 
 ### How do I get set up? ###
 
