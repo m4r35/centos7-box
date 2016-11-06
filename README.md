@@ -65,4 +65,4 @@ Configuration shouldn't take longer than 10 minutes :)
 
 ### Additional Configuration ###
 
-By default, nginx is configured to listen on port 80 while apache is listening on port 8080. This can be tweaked on provisioning level including the additional vhosts for both nginx and apache.
+By default, nginx is configured to listen on port 80 while apache is listening on port 8080. This can be tweaked on provisioning level as well as configuring additional vhosts for both nginx and apache.
