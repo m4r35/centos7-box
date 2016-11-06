@@ -1,1 +1,0 @@
-{"virtualbox":{"/vagrant":{"type":"virtualbox","guestpath":"/vagrant","hostpath":"C:/Users/m4r35/Documents/code/boxes/centos7","disabled":false,"__vagrantfile":true},"/opt/code":{"guestpath":"/opt/code","hostpath":"C:/Users/m4r35/Documents/code","disabled":false,"__vagrantfile":true}}}
