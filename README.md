@@ -85,3 +85,5 @@ By default, nginx is configured to listen on port 80 while apache is listening o
 
 Vagranfile
 ```
+
+`files` folder contains box level configuration (in this case for `m4r35-fra` box). Everything inside `m4r35-fra` folder will be mapped to newly provisioned box, which means that we can have independent configurations for different boxes.
