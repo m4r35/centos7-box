@@ -32,9 +32,4 @@
 
 ### Quick Start ###
 
-* Summary of set up
-* Configuration
-* Dependencies
-* Database configuration
-* How to run tests
-* Deployment instructions
+First we need to add Centos/7 iso to vagrant
