@@ -1,7 +1,8 @@
 # My Centos7 Vagrant Box #
 
->*This build is aimed for development primarily.*
+## This build is aimed for development primarily.
 
+### Software prerequisites
 
 ### Packages included ###
 
