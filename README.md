@@ -87,3 +87,11 @@ Vagranfile
 ```
 
 `files` folder contains box level configuration (in this case for `m4r35-fra` box). Everything inside `m4r35-fra` folder will be mapped to newly provisioned box, which means that we can have independent configurations for different boxes.
+
+After modifying existing configuration files we need to re-provision Vagrant box:
+
+```
+#!bash
+
+vagrant reload --provision
+```
