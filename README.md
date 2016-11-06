@@ -4,6 +4,9 @@
 
 ### Software prerequisites
 
+* Vagrant 1.8.4
+* VirtualBox 5.0.26
+
 ### Packages included ###
 
 * vim
