@@ -17,10 +17,13 @@ touch /opt/code/logs/cdn.tools.access.log
 touch /opt/code/logs/cdn.tools.error.log
 touch /opt/code/logs/apartmanimandic.access.log
 touch /opt/code/logs/apartmanimandic.error.log
+touch /opt/code/logs/plesnagrupafly.access.log
+touch /opt/code/logs/plesnagrupafly.error.log
 
 # Update hosts file
 echo "127.0.0.1 cdn.tools.test" >> /etc/hosts
 echo "127.0.0.1 apartmanimandic.test" >> /etc/hosts
+echo "127.0.0.1 plesnagrupafly.test" >> /etc/hosts
 
 # Configure Apache virtual hosts
 mkdir -p /etc/httpd/sites-available
