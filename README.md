@@ -66,7 +66,7 @@ vagrant up
 
 By default, nginx is configured to listen on port 80 while apache is listening on port 8080. This can be tweaked on provisioning level as well as vhost configuration for both nginx and apache.
 
-`files` folder contains box level configuration (in this case for `m4r35-fra` box). Everything inside `m4r35-fra` folder will be mapped to newly provisioned box, which means that we can have independent configurations for different boxes.
+`box-config` folder contains box level configuration (in this case for `centos7-box` box). Everything inside `centos7-box` folder will be mapped to newly provisioned box, which means that we can have independent configurations for different boxes.
 
 After modifying existing configuration files we need to re-provision Vagrant box:
 
