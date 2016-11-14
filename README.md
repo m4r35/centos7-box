@@ -61,30 +61,10 @@ After adding Centos iso to Vagrant we can bootstrap our new box:
 
 vagrant up
 ```
-Configuration shouldn't take longer than 10 minutes :)
 
 ### Additional Configuration ###
 
-By default, nginx is configured to listen on port 80 while apache is listening on port 8080. This can be tweaked on provisioning level as well as vhost configuration for both nginx and apache. Let's look at the folder structure:
-
-```
-#!bash
-
-- files
-    - m4r35-fra
-      - etc
-        - httpd
-        - nginx
-        - php-fpm.d
-        - php.d
-        my.cnf
-
-- provisioners
-  bootstrap.sh
-  common.sh
-
-Vagranfile
-```
+By default, nginx is configured to listen on port 80 while apache is listening on port 8080. This can be tweaked on provisioning level as well as vhost configuration for both nginx and apache.
 
 `files` folder contains box level configuration (in this case for `m4r35-fra` box). Everything inside `m4r35-fra` folder will be mapped to newly provisioned box, which means that we can have independent configurations for different boxes.
 
