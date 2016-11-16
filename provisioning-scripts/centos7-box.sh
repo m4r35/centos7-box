@@ -1,21 +1,9 @@
 #!/usr/bin/env bash
 yum -y install http://rpms.remirepo.net/enterprise/remi-release-7.rpm
 yum -y install https://dev.mysql.com/get/mysql57-community-release-el7-8.noarch.rpm
-yum -y install yum-utils epel-release
 yum-config-manager --enable remi-php56
 yum -y update
-curl -o /etc/yum.repos.d/dperson-neovim-epel-7.repo https://copr.fedorainfracloud.org/coprs/dperson/neovim/repo/epel-7/dperson-neovim-epel-7.repo
-#yum install -y memcached mysql-community-server httpd php php-fpm php-mysql php-gd php-intl php-mbstring php-xmlrpc php-pecl-apcu php-pecl-memcached php-pecl-xdebug php-soap php-bcmath nginx rubygems ruby-devel rubygem-json_pure nodejs npm rsync vim-enhanced tmux policycoreutils-python git ntp wget make
-yum install -y mysql-community-server httpd php php-mysql nginx rsync vim-enhanced tmux policycoreutils-python git ntp wget make
-
-# Double check the system time.
-timedatectl set-timezone UTC
-ntpdate pool.ntp.org
-
-# Copy machine-specific files into place.
-if [ -d "/vagrant/box-config/$HOSTNAME" ]; then
-  rsync --recursive --verbose --backup /vagrant/box-config/$HOSTNAME/ /
-fi
+yum install -y mysql-community-server httpd php php-mysql nginx
 
 # Create log files
 mkdir -p /opt/code/logs
@@ -69,3 +57,8 @@ echo "#!/usr/bin/env sh" >> /scripts/services.sh
 echo "systemctl status httpd.service" >> /scripts/services.sh
 echo "systemctl status mysqld.service" >> /scripts/services.sh
 echo "systemctl status nginx.service" >> /scripts/services.sh
+
+# setup test website
+mkdir /opt/hello.local
+touch /opt/hello.local/index.html
+echo "Hello Sir!" >> /opt/hello.local/index.html
