@@ -80,7 +80,7 @@ To save machine snapshot run:
 vagrant snapshot save NAME
 ```
 
-and to restore snapshot:
+and to restore a snapshot:
 
 ```
 #!bash
