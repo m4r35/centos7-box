@@ -1,4 +1,4 @@
-# My Centos7 Vagrant Box #
+# Centos7 Vagrant Box #
 
 
 
