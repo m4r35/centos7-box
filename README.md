@@ -64,6 +64,28 @@ After modifying existing configuration files we need to re-provision Vagrant box
 vagrant reload --provision
 ```
 
+To turn off machine, type: 
+```
+#!bash
+
+vagrant halt
+```
+
+To save machine snapshot run:
+```
+#!bash
+
+vagrant snapshot save NAME
+```
+
+and to restore snapshot:
+
+```
+#!bash
+
+vagrant snapshot restore NAME
+```
+
 Run into problem with vm?
 
 ```
