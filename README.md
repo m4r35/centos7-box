@@ -56,6 +56,8 @@ By default, nginx is configured to listen on port 80 while apache is listening o
 
 `box-config` folder contains box level configuration (in this case for `centos7-box` box). Everything inside `centos7-box` folder will be mapped to newly provisioned box, which means that we can have independent configurations for different boxes.
 
+Adding or removing packages from the box is done by modifying `provisioning-scripts/centos7-box.sh` file.
+
 After modifying existing configuration files we need to re-provision Vagrant box:
 
 ```
