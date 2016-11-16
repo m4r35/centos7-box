@@ -48,6 +48,7 @@ Boot machine:
 
 vagrant up
 ```
+> All `vagrant` commands needs to be run from the directory where Vagrant file is located.
 
 ### Additional Configuration ###
 
