@@ -23,7 +23,6 @@ vagrant box add centos/7
 
 We can see the list of existing Vagrant boxes by typing:
 
-
 ```
 #!sh
 
@@ -35,8 +34,15 @@ puphpet/centos65-x64 (virtualbox, 20151130)
 
 >For additional info check [official Centos documentation](https://seven.centos.org/2016/10/updated-centos-vagrant-images-available-v1609-01/).
 
-After adding Centos iso to Vagrant we can bootstrap our new box:
+After adding Centos iso to Vagrant, configure synced folder on your local machine by editing Vargant file ( e.g. /code folder on local machine will be synced to /opt/code on virtual machine ):
 
+```
+#!bash
+config.vm.synced_folder "../../../code", "/opt/code"
+
+```
+
+Boot machine:
 ```
 #!bash
 
@@ -44,6 +50,7 @@ vagrant up
 ```
 
 ### Additional Configuration ###
+
 
 By default, nginx is configured to listen on port 80 while apache is listening on port 8080. This can be tweaked on provisioning level as well as vhost configuration for both nginx and apache.
 
