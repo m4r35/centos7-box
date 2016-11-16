@@ -16,16 +16,12 @@ mysql-community-server httpd php php-mysql nginx rsync vim-enhanced tmux policyc
 First we need to add Centos/7 iso to Vagrant
 
 ```
-#!sh
-
 vagrant box add centos/7
 ```
 
 We can see the list of existing Vagrant boxes by typing:
 
 ```
-#!sh
-
 vagrant box list
 
 centos/7             (virtualbox, 1609.01)
@@ -37,15 +33,12 @@ puphpet/centos65-x64 (virtualbox, 20151130)
 After adding Centos iso to Vagrant, configure synced folder on your local machine by editing Vargant file ( e.g. /code folder on local machine will be synced to /opt/code on virtual machine ):
 
 ```
-#!bash
 config.vm.synced_folder "../../code", "/opt/code"
 
 ```
 
 Boot machine:
 ```
-#!bash
-
 vagrant up
 ```
 > All `vagrant` commands should to be run from the directory where `Vagrant` file is located.
@@ -62,51 +55,37 @@ Adding or removing packages from the box is done by modifying `provisioning-scri
 After modifying existing configuration files we need to re-provision Vagrant box:
 
 ```
-#!bash
-
 vagrant reload --provision
 ```
 To login into newly created machine, type: 
 ```
-#!bash
-
 vagrant ssh
 ```
 
 To turn off machine, type: 
 ```
-#!bash
-
 vagrant halt
 ```
 
 To save machine snapshot run:
 ```
-#!bash
-
 vagrant snapshot save NAME
 ```
 
 and to restore a snapshot:
 
 ```
-#!bash
-
 vagrant snapshot restore NAME
 ```
 
 Run into problem with vm?
 
 ```
-#!bash
-
 vagrant destroy
 ```
 
 and then 
 
 ```
-#!bash
-
 vagrant up
 ```
