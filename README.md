@@ -65,6 +65,12 @@ After modifying existing configuration files we need to re-provision Vagrant box
 
 vagrant reload --provision
 ```
+To login to newly created machine, type: 
+```
+#!bash
+
+vagrant ssh
+```
 
 To turn off machine, type: 
 ```
