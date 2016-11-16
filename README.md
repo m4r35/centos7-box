@@ -65,7 +65,7 @@ After modifying existing configuration files we need to re-provision Vagrant box
 
 vagrant reload --provision
 ```
-To login to newly created machine, type: 
+To login into newly created machine, type: 
 ```
 #!bash
 
