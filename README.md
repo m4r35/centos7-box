@@ -63,3 +63,19 @@ After modifying existing configuration files we need to re-provision Vagrant box
 
 vagrant reload --provision
 ```
+
+Run into problem with vm?
+
+```
+#!bash
+
+vagrant destroy
+```
+
+and then 
+
+```
+#!bash
+
+vagrant up
+```
