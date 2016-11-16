@@ -9,26 +9,7 @@
 
 ### Packages Included ###
 
-* vim
-* tmux
-* policycoreutils-python
-* git
-* ntp
-* wget
-* make
-* memcached
-* mysql-community-server
-* httpd
-* php (php-mysql, php-gd, php-intl php-mbstring, php-xmlrpc, php-pecl-apcu, php-pecl-memcached, php-pecl-xdebug php-soap php-bcmath)
-* php-fpm
-* nginx 
-* rubygems 
-* ruby-devel 
-* rubygem-json_pure 
-* nodejs 
-* npm
-* gulp
-* composer
+mysql-community-server httpd php php-mysql nginx rsync vim-enhanced tmux policycoreutils-python git ntp wget make
 
 ### Quick Start ###
 
