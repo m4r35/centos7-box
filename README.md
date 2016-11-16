@@ -38,7 +38,7 @@ After adding Centos iso to Vagrant, configure synced folder on your local machin
 
 ```
 #!bash
-config.vm.synced_folder "../../../code", "/opt/code"
+config.vm.synced_folder "../../code", "/opt/code"
 
 ```
 
